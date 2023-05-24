@@ -435,12 +435,22 @@ import { jsx as jsx3 } from "react/jsx-runtime";
 function Checkbox2(props) {
   return /* @__PURE__ */ jsx3(CheckboxContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ jsx3(CheckboxIndicator, { asChild: true, children: /* @__PURE__ */ jsx3(Check, { weight: "bold" }) }) }));
 }
+
+// src/components/MultiStep/styles.ts
+var MultiStepContainer = styled("div", {});
+
+// src/components/MultiStep/index.tsx
+import { jsx as jsx4 } from "react/jsx-runtime";
+function MultiStep() {
+  return /* @__PURE__ */ jsx4(MultiStepContainer, {});
+}
 export {
   Avatar2 as Avatar,
   Box,
   Button,
   Checkbox2 as Checkbox,
   Heading,
+  MultiStep,
   Text,
   TextArea,
   TextInput
