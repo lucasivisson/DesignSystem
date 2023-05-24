@@ -378,9 +378,6 @@ var TextArea = styled("textarea", {
   }
 });
 
-// src/components/Checkbox/index.tsx
-import { CheckboxIndicator as CheckboxIndicator2 } from "@radix-ui/react-checkbox";
-
 // src/components/Checkbox/styles.ts
 import * as Checkbox from "@radix-ui/react-checkbox";
 var CheckboxContainer = styled(Checkbox.Root, {
@@ -401,12 +398,12 @@ var CheckboxContainer = styled(Checkbox.Root, {
     backgroundColor: "$ignite300"
   },
   "&:focus": {
-    border: "2px solid $gray300"
+    border: "2px solid $ignite300"
   }
 });
 var slideIn = keyframes({
   from: {
-    transform: "transalteY(-100%)"
+    transform: "translateY(-100%)"
   },
   to: {
     transform: "translateY(0)"
@@ -414,10 +411,10 @@ var slideIn = keyframes({
 });
 var slideOut = keyframes({
   from: {
-    transform: "transalteY(0)"
+    transform: "translateY(0)"
   },
   to: {
-    transform: "translateY(100%)"
+    transform: "translateY(-100%)"
   }
 });
 var CheckboxIndicator = styled(Checkbox.Indicator, {
@@ -436,7 +433,7 @@ var CheckboxIndicator = styled(Checkbox.Indicator, {
 import { Check } from "phosphor-react";
 import { jsx as jsx3 } from "react/jsx-runtime";
 function Checkbox2(props) {
-  return /* @__PURE__ */ jsx3(CheckboxContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ jsx3(CheckboxIndicator2, { asChild: true, children: /* @__PURE__ */ jsx3(Check, { weight: "bold" }) }) }));
+  return /* @__PURE__ */ jsx3(CheckboxContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ jsx3(CheckboxIndicator, { asChild: true, children: /* @__PURE__ */ jsx3(Check, { weight: "bold" }) }) }));
 }
 export {
   Avatar2 as Avatar,

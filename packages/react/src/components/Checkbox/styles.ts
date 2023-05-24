@@ -14,7 +14,6 @@ export const CheckboxContainer = styled(Checkbox.Root, {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-
   border: '2px solid $gray900',
 
   '&[data-state="checked"]': {
@@ -22,13 +21,13 @@ export const CheckboxContainer = styled(Checkbox.Root, {
   },
 
   '&:focus': {
-    border: '2px solid $gray300',
+    border: '2px solid $ignite300',
   },
 })
 
 const slideIn = keyframes({
   from: {
-    transform: 'transalteY(-100%)',
+    transform: 'translateY(-100%)',
   },
   to: {
     transform: 'translateY(0)',
@@ -37,10 +36,10 @@ const slideIn = keyframes({
 
 const slideOut = keyframes({
   from: {
-    transform: 'transalteY(0)',
+    transform: 'translateY(0)',
   },
   to: {
-    transform: 'translateY(100%)',
+    transform: 'translateY(-100%)',
   },
 })
 
