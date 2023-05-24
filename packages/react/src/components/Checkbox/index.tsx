@@ -9,7 +9,7 @@ export interface CheckboxProps
 export function Checkbox(props: CheckboxProps) {
   return (
     <CheckboxContainer {...props}>
-      <CheckboxIndicator asChild>
+      <CheckboxIndicator asChild={true}>
         <Check weight="bold" />
       </CheckboxIndicator>
     </CheckboxContainer>

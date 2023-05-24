@@ -397,14 +397,39 @@ var CheckboxContainer = styled(Checkbox.Root, {
   justifyContent: "center",
   alignItems: "center",
   border: "2px solid $gray900",
+  '&[data-state="checked"]': {
+    backgroundColor: "$ignite300"
+  },
   "&:focus": {
     border: "2px solid $gray300"
+  }
+});
+var slideIn = keyframes({
+  from: {
+    transform: "transalteY(-100%)"
+  },
+  to: {
+    transform: "translateY(0)"
+  }
+});
+var slideOut = keyframes({
+  from: {
+    transform: "transalteY(0)"
+  },
+  to: {
+    transform: "translateY(100%)"
   }
 });
 var CheckboxIndicator = styled(Checkbox.Indicator, {
   color: "$white",
   width: "$4",
-  height: "$4"
+  height: "$4",
+  '&[data-state="checked"]': {
+    animation: `${slideIn} 200ms ease-out`
+  },
+  '&[data-state="unchecked"]': {
+    animation: `${slideOut} 200ms ease-out`
+  }
 });
 
 // src/components/Checkbox/index.tsx
