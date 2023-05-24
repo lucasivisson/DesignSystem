@@ -1,11 +1,14 @@
-import { Box, Text, MultiStep, MultiStepProps } from '@ignite-ui/react'
+import { Box, MultiStep, MultiStepProps } from '@ignite-ui/react'
 import type { StoryObj, Meta } from '@storybook/react'
 
 export default {
-  title: 'Form/TMulti Step',
+  title: 'Form/Multi Step',
   component: MultiStep,
   tags: ['autodocs'],
-  args: {},
+  args: {
+    size: 4,
+    currentStep: 1,
+  },
   decorators: [
     (Story) => {
       return (
@@ -13,7 +16,6 @@ export default {
           as="label"
           css={{ display: 'flex', flexDirection: 'column', gap: '$2' }}
         >
-          <Text size="sm">Email address</Text>
           {Story()}
         </Box>
       )
@@ -23,4 +25,10 @@ export default {
 
 export const Primary: StoryObj<MultiStepProps> = {
   args: {},
+}
+
+export const Full: StoryObj<MultiStepProps> = {
+  args: {
+    currentStep: 4,
+  },
 }

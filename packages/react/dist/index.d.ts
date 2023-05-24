@@ -1668,6 +1668,6 @@ interface MultiStepProps {
     size: number;
     currentStep?: number;
 }
-declare function MultiStep(): react_jsx_runtime.JSX.Element;
+declare function MultiStep({ size, currentStep }: MultiStepProps): react_jsx_runtime.JSX.Element;
 
 export { Avatar, AvatarProps, Box, BoxProps, Button, ButtonProps, Checkbox, CheckboxProps, Heading, HeadingProps, MultiStep, MultiStepProps, Text, TextArea, TextAreaProps, TextInput, TextInputProps, TextProps };
