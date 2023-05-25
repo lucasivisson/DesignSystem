@@ -1,37 +1,37 @@
-import { Heading, HeadingProps } from '@ignite-ui/react'
-import type { StoryObj, Meta } from '@storybook/react'
+import { Heading, HeadingProps } from "@lucas-ignite-ui/react";
+import type { StoryObj, Meta } from "@storybook/react";
 
 export default {
-  title: 'Typography/Heading',
+  title: "Typography/Heading",
   component: Heading,
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   args: {
-    children: 'Custom title',
-    size: 'md',
+    children: "Custom title",
+    size: "md",
   },
   argTypes: {
     size: {
-      options: ['sm', 'md', 'lg', '2xl', '4xl', '5xl', '6xl'],
+      options: ["sm", "md", "lg", "2xl", "4xl", "5xl", "6xl"],
       control: {
-        type: 'inline-radio',
+        type: "inline-radio",
       },
     },
   },
-} as Meta<HeadingProps>
+} as Meta<HeadingProps>;
 
-export const Primary: StoryObj<HeadingProps> = {}
+export const Primary: StoryObj<HeadingProps> = {};
 
 export const CustomTag: StoryObj<HeadingProps> = {
   args: {
-    children: 'H1 Heading',
-    as: 'h1',
+    children: "H1 Heading",
+    as: "h1",
   },
   parameters: {
     docs: {
       description: {
         story:
-          'Por padrão o heading sempre será um `h2`, mas podemos alterar isso com a propriedade `as`.',
+          "Por padrão o heading sempre será um `h2`, mas podemos alterar isso com a propriedade `as`.",
       },
     },
   },
-}
+};
