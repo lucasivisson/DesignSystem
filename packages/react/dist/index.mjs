@@ -34,6 +34,7 @@ var __objRest = (source, exclude) => {
 var colors = {
   white: "#FFF",
   black: "#000",
+  brown: "brown",
   gray100: "#E1E1E6",
   gray200: "#A9A9B2",
   gray400: "#7C7C8A",
@@ -132,7 +133,7 @@ var {
 
 // src/components/Box.tsx
 var Box = styled("div", {
-  padding: "$4",
+  padding: "$6",
   borderRadius: "$md",
   backgroundColor: "$gray800",
   border: "1px solid $gray600"
@@ -197,8 +198,8 @@ import * as Avatar from "@radix-ui/react-avatar";
 var AvatarContainer = styled(Avatar.Root, {
   borderRadius: "$full",
   display: "inline-block",
-  width: "$12",
-  height: "$12",
+  width: "$16",
+  height: "$16",
   overflow: "hidden"
 });
 var AvatarImage = styled(Avatar.Image, {
@@ -255,6 +256,9 @@ var Button = styled("button", {
   "&:disabled": {
     cursor: "not-allowed"
   },
+  "&:focus": {
+    boxShadow: "0 0 0 2px $colors$gray100"
+  },
   variants: {
     variant: {
       primary: {
@@ -305,21 +309,36 @@ var Button = styled("button", {
 });
 Button.displayName = "Button";
 
+// src/components/TextInput/index.tsx
+import { forwardRef } from "react";
+
 // src/components/TextInput/styles.ts
 var TextInputContainer = styled("div", {
   backgroundColor: "$gray900",
-  padding: "$3 $4",
   borderRadius: "$sm",
   boxSizing: "border-box",
   border: "2px solid $gray900",
+  variants: {
+    size: {
+      sm: {
+        padding: "$2 $3"
+      },
+      md: {
+        padding: "$3 $4"
+      }
+    }
+  },
   display: "flex",
-  alignItems: "baseline",
+  alignItems: "center",
   "&:has(input:focus)": {
     borderColor: "$ignite300"
   },
   "&:has(input:disabled)": {
     opacity: 0.5,
     cursor: "not-allowed"
+  },
+  defaultVariants: {
+    size: "md"
   }
 });
 var Prefix = styled("span", {
@@ -342,20 +361,22 @@ var Input = styled("input", {
   "&:disabled": {
     cursor: "not-allowed"
   },
-  "&:placeholder": {
+  "&::placeholder": {
     color: "$gray400"
   }
 });
 
 // src/components/TextInput/index.tsx
 import { jsx as jsx2, jsxs as jsxs2 } from "react/jsx-runtime";
-function TextInput(_a) {
-  var _b = _a, { prefix } = _b, props = __objRest(_b, ["prefix"]);
-  return /* @__PURE__ */ jsxs2(TextInputContainer, { children: [
-    !!prefix && /* @__PURE__ */ jsx2(Prefix, { children: prefix }),
-    /* @__PURE__ */ jsx2(Input, __spreadValues({}, props))
-  ] });
-}
+var TextInput = forwardRef(
+  (_a, ref) => {
+    var _b = _a, { prefix } = _b, props = __objRest(_b, ["prefix"]);
+    return /* @__PURE__ */ jsxs2(TextInputContainer, { children: [
+      !!prefix && /* @__PURE__ */ jsx2(Prefix, { children: prefix }),
+      /* @__PURE__ */ jsx2(Input, __spreadValues({ ref }, props))
+    ] });
+  }
+);
 TextInput.displayName = "TextInput";
 
 // src/components/TextArea.tsx
@@ -404,7 +425,7 @@ var CheckboxContainer = styled(Checkbox.Root, {
   '&[data-state="checked"]': {
     backgroundColor: "$ignite300"
   },
-  "&:focus": {
+  '&:focus, &[data-state="checked"]': {
     border: "2px solid $ignite300"
   }
 });
@@ -488,6 +509,37 @@ function MultiStep({ size, currentStep = 1 }) {
   ] });
 }
 MultiStep.displayName = "MultiStep";
+
+// src/components/Toast/styles.ts
+var ToastContainer = styled("div", {
+  width: "$80",
+  height: "$20",
+  background: "red",
+  borderRadius: "$xs",
+  color: "$white",
+  display: "flex",
+  justifyContent: "space-between",
+  boxSizing: "border-box",
+  padding: "$4"
+});
+var ToastTitle = styled("div", {});
+var ToastText = styled("div", {});
+var ToastDate = styled("div", {});
+var ToastClose = styled("div", {});
+
+// src/components/Toast/index.tsx
+import { X } from "phosphor-react";
+import { jsx as jsx5, jsxs as jsxs4 } from "react/jsx-runtime";
+function Toast({ title, date }) {
+  return /* @__PURE__ */ jsxs4(ToastContainer, { children: [
+    /* @__PURE__ */ jsxs4(ToastText, { children: [
+      /* @__PURE__ */ jsx5(ToastTitle, { children: title }),
+      /* @__PURE__ */ jsx5(ToastDate, { children: date })
+    ] }),
+    /* @__PURE__ */ jsx5(ToastClose, { children: /* @__PURE__ */ jsx5(X, {}) })
+  ] });
+}
+Toast.displayName = "Toast";
 export {
   Avatar2 as Avatar,
   Box,
@@ -497,5 +549,14 @@ export {
   MultiStep,
   Text,
   TextArea,
-  TextInput
+  TextInput,
+  Toast,
+  config,
+  createTheme,
+  css,
+  getCssText,
+  globalCss,
+  keyframes,
+  styled,
+  theme
 };
