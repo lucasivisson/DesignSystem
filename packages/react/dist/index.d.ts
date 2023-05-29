@@ -711,7 +711,7 @@ declare const AvatarImage: _stitches_react_types_styled_component.StyledComponen
         40: string;
         64: string;
         80: string;
-        100: string;
+        96: string;
     };
 }, {
     height: "space";
@@ -1134,7 +1134,7 @@ declare const Input: _stitches_react_types_styled_component.StyledComponent<"inp
         40: string;
         64: string;
         80: string;
-        100: string;
+        96: string;
     };
 }, {
     height: "space";
@@ -1551,7 +1551,7 @@ declare const CheckboxContainer: _stitches_react_types_styled_component.StyledCo
         40: string;
         64: string;
         80: string;
-        100: string;
+        96: string;
     };
 }, {
     height: "space";
@@ -1701,7 +1701,6 @@ declare namespace MultiStep {
 }
 
 interface ToastProps extends ComponentProps<typeof X> {
-    duration: number;
     title: string;
     date: string;
 }
@@ -1995,7 +1994,7 @@ declare const styled: <Type extends _stitches_react_types_util.Function | keyof 
         40: string;
         64: string;
         80: string;
-        100: string;
+        96: string;
     };
 }, {
     height: "space";
@@ -2209,7 +2208,7 @@ declare const styled: <Type extends _stitches_react_types_util.Function | keyof 
         40: string;
         64: string;
         80: string;
-        100: string;
+        96: string;
     };
 }, {
     height: "space";
@@ -2415,7 +2414,7 @@ declare const css: <Composers extends (string | _stitches_react_types_util.Funct
         40: string;
         64: string;
         80: string;
-        100: string;
+        96: string;
     };
 }, {
     height: "space";
@@ -2636,7 +2635,7 @@ declare const globalCss: <Styles extends {
             40: string;
             64: string;
             80: string;
-            100: string;
+            96: string;
         };
     }, {
         height: "space";
@@ -2840,7 +2839,7 @@ declare const globalCss: <Styles extends {
         40: string;
         64: string;
         80: string;
-        100: string;
+        96: string;
     };
 }, {
     height: "space";
@@ -3045,7 +3044,7 @@ declare const keyframes: (style: {
             40: string;
             64: string;
             80: string;
-            100: string;
+            96: string;
         };
     }, {
         height: "space";
@@ -3257,7 +3256,7 @@ declare const theme: string & {
         40: _stitches_react_types_theme.Token<"40", string, "space", "">;
         64: _stitches_react_types_theme.Token<"64", string, "space", "">;
         80: _stitches_react_types_theme.Token<"80", string, "space", "">;
-        100: _stitches_react_types_theme.Token<"100", string, "space", "">;
+        96: _stitches_react_types_theme.Token<"96", string, "space", "">;
     };
 };
 declare const createTheme: <Argument0 extends string | ({
@@ -3332,7 +3331,7 @@ declare const createTheme: <Argument0 extends string | ({
         40?: string | number | boolean | undefined;
         64?: string | number | boolean | undefined;
         80?: string | number | boolean | undefined;
-        100?: string | number | boolean | undefined;
+        96?: string | number | boolean | undefined;
     } | undefined;
 } & {
     [x: string]: {
@@ -3411,7 +3410,7 @@ declare const createTheme: <Argument0 extends string | ({
         40?: string | number | boolean | undefined;
         64?: string | number | boolean | undefined;
         80?: string | number | boolean | undefined;
-        100?: string | number | boolean | undefined;
+        96?: string | number | boolean | undefined;
     } | undefined;
 } & {
     [x: string]: {
@@ -3497,7 +3496,7 @@ declare const config: {
             40: string;
             64: string;
             80: string;
-            100: string;
+            96: string;
         };
     };
     themeMap: {
