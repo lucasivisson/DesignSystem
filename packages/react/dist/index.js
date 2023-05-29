@@ -113,7 +113,8 @@ var space = {
   20: "5rem",
   40: "10rem",
   64: "16rem",
-  80: "20rem"
+  80: "20rem",
+  96: "24rem"
 };
 var radii = {
   px: "1px",
@@ -562,31 +563,49 @@ MultiStep.displayName = "MultiStep";
 
 // src/components/Toast/styles.ts
 var ToastContainer = styled("div", {
-  width: "$80",
+  width: "$96",
   height: "$20",
-  background: "red",
+  background: "$gray800",
   borderRadius: "$xs",
   color: "$white",
   display: "flex",
   justifyContent: "space-between",
   boxSizing: "border-box",
-  padding: "$4"
+  padding: "$4",
+  border: "1px solid $color$gray600",
+  fontFamily: "$default"
 });
-var ToastTitle = styled("div", {});
-var ToastText = styled("div", {});
-var ToastDate = styled("div", {});
-var ToastClose = styled("div", {});
+var ToastTitle = styled("div", {
+  fontSize: "$xl",
+  fontWeight: "$bold"
+});
+var ToastText = styled("div", {
+  width: "100%",
+  height: "100%",
+  display: "flex",
+  alignItems: "flex-start",
+  flexDirection: "column",
+  justifyContent: "space-between"
+});
+var ToastDate = styled("div", {
+  fontSize: "$sm",
+  color: "$gray200"
+});
+var ToastClose = styled("div", {
+  cursor: "pointer"
+});
 
 // src/components/Toast/index.tsx
 var import_phosphor_react3 = require("phosphor-react");
 var import_jsx_runtime5 = require("react/jsx-runtime");
-function Toast({ title, date }) {
+function Toast(_a) {
+  var _b = _a, { title, date } = _b, props = __objRest(_b, ["title", "date"]);
   return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(ToastContainer, { children: [
     /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(ToastText, { children: [
       /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(ToastTitle, { children: title }),
       /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(ToastDate, { children: date })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(ToastClose, { children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_phosphor_react3.X, {}) })
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(ToastClose, { children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_phosphor_react3.X, __spreadValues({ size: 20 }, props)) })
   ] });
 }
 Toast.displayName = "Toast";

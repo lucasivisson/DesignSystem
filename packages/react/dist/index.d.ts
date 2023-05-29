@@ -5,6 +5,7 @@ import { ComponentProps, ElementType } from 'react';
 import * as react_jsx_runtime from 'react/jsx-runtime';
 import * as Avatar$1 from '@radix-ui/react-avatar';
 import * as Checkbox$1 from '@radix-ui/react-checkbox';
+import { X } from 'phosphor-react';
 import * as _stitches_react_types_theme from '@stitches/react/types/theme';
 import * as _stitches_react_types_css from '@stitches/react/types/css';
 import * as _stitches_react_types_stitches from '@stitches/react/types/stitches';
@@ -82,6 +83,7 @@ declare const Box: _stitches_react_types_styled_component.StyledComponent<"div",
         40: string;
         64: string;
         80: string;
+        96: string;
     };
 }, {
     height: "space";
@@ -291,6 +293,7 @@ declare const Text: _stitches_react_types_styled_component.StyledComponent<"p", 
         40: string;
         64: string;
         80: string;
+        96: string;
     };
 }, {
     height: "space";
@@ -500,6 +503,7 @@ declare const Heading: _stitches_react_types_styled_component.StyledComponent<"h
         40: string;
         64: string;
         80: string;
+        96: string;
     };
 }, {
     height: "space";
@@ -639,6 +643,7 @@ declare const AvatarImage: _stitches_react_types_styled_component.StyledComponen
     colors: {
         white: string;
         black: string;
+        brown: string;
         gray100: string;
         gray200: string;
         gray400: string;
@@ -706,6 +711,7 @@ declare const AvatarImage: _stitches_react_types_styled_component.StyledComponen
         40: string;
         64: string;
         80: string;
+        100: string;
     };
 }, {
     height: "space";
@@ -920,6 +926,7 @@ declare const Button: _stitches_react_types_styled_component.StyledComponent<"bu
         40: string;
         64: string;
         80: string;
+        96: string;
     };
 }, {
     height: "space";
@@ -1059,6 +1066,7 @@ declare const Input: _stitches_react_types_styled_component.StyledComponent<"inp
     colors: {
         white: string;
         black: string;
+        brown: string;
         gray100: string;
         gray200: string;
         gray400: string;
@@ -1126,6 +1134,7 @@ declare const Input: _stitches_react_types_styled_component.StyledComponent<"inp
         40: string;
         64: string;
         80: string;
+        100: string;
     };
 }, {
     height: "space";
@@ -1335,6 +1344,7 @@ declare const TextArea: _stitches_react_types_styled_component.StyledComponent<"
         40: string;
         64: string;
         80: string;
+        96: string;
     };
 }, {
     height: "space";
@@ -1473,6 +1483,7 @@ declare const CheckboxContainer: _stitches_react_types_styled_component.StyledCo
     colors: {
         white: string;
         black: string;
+        brown: string;
         gray100: string;
         gray200: string;
         gray400: string;
@@ -1540,6 +1551,7 @@ declare const CheckboxContainer: _stitches_react_types_styled_component.StyledCo
         40: string;
         64: string;
         80: string;
+        100: string;
     };
 }, {
     height: "space";
@@ -1688,12 +1700,12 @@ declare namespace MultiStep {
     var displayName: string;
 }
 
-interface ToastProps {
+interface ToastProps extends ComponentProps<typeof X> {
     duration: number;
     title: string;
     date: string;
 }
-declare function Toast({ title, date }: ToastProps): react_jsx_runtime.JSX.Element;
+declare function Toast({ title, date, ...props }: ToastProps): react_jsx_runtime.JSX.Element;
 declare namespace Toast {
     var displayName: string;
 }
@@ -1772,6 +1784,7 @@ declare const styled: <Type extends _stitches_react_types_util.Function | keyof 
         40: string;
         64: string;
         80: string;
+        100: string;
     };
 }, {
     height: "space";
@@ -1985,6 +1998,7 @@ declare const styled: <Type extends _stitches_react_types_util.Function | keyof 
         40: string;
         64: string;
         80: string;
+        100: string;
     };
 }, {
     height: "space";
@@ -2190,6 +2204,7 @@ declare const css: <Composers extends (string | _stitches_react_types_util.Funct
         40: string;
         64: string;
         80: string;
+        100: string;
     };
 }, {
     height: "space";
@@ -2410,6 +2425,7 @@ declare const globalCss: <Styles extends {
             40: string;
             64: string;
             80: string;
+            100: string;
         };
     }, {
         height: "space";
@@ -2613,6 +2629,7 @@ declare const globalCss: <Styles extends {
         40: string;
         64: string;
         80: string;
+        100: string;
     };
 }, {
     height: "space";
@@ -2817,6 +2834,7 @@ declare const keyframes: (style: {
             40: string;
             64: string;
             80: string;
+            100: string;
         };
     }, {
         height: "space";
@@ -3028,6 +3046,7 @@ declare const theme: string & {
         40: _stitches_react_types_theme.Token<"40", string, "space", "">;
         64: _stitches_react_types_theme.Token<"64", string, "space", "">;
         80: _stitches_react_types_theme.Token<"80", string, "space", "">;
+        100: _stitches_react_types_theme.Token<"100", string, "space", "">;
     };
 };
 declare const createTheme: <Argument0 extends string | ({
@@ -3102,6 +3121,7 @@ declare const createTheme: <Argument0 extends string | ({
         40?: string | number | boolean | undefined;
         64?: string | number | boolean | undefined;
         80?: string | number | boolean | undefined;
+        100?: string | number | boolean | undefined;
     } | undefined;
 } & {
     [x: string]: {
@@ -3180,6 +3200,7 @@ declare const createTheme: <Argument0 extends string | ({
         40?: string | number | boolean | undefined;
         64?: string | number | boolean | undefined;
         80?: string | number | boolean | undefined;
+        100?: string | number | boolean | undefined;
     } | undefined;
 } & {
     [x: string]: {
@@ -3265,6 +3286,7 @@ declare const config: {
             40: string;
             64: string;
             80: string;
+            100: string;
         };
     };
     themeMap: {

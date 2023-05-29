@@ -9,7 +9,14 @@ export default {
   decorators: [
     (Story) => {
       return (
-        <Box css={{ display: 'flex', flexDirection: 'row', gap: '$2' }}>
+        <Box
+          css={{
+            display: 'flex',
+            flexDirection: 'row',
+            gap: '$2',
+            backgroundColor: '$gray900',
+          }}
+        >
           {Story()}
         </Box>
       )
@@ -20,6 +27,6 @@ export default {
 export const Primary: StoryObj<ToastProps> = {
   args: {
     title: 'Agendamento Realizado',
-    date: ' Quarta-feira, 23 de Outubro as 16h',
+    date: 'Quarta-feira, 23 de Outubro as 16h',
   },
 }

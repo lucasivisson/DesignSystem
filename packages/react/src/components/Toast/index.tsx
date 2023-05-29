@@ -1,3 +1,4 @@
+import { ComponentProps } from 'react'
 import {
   ToastContainer,
   ToastDate,
@@ -7,13 +8,12 @@ import {
 } from './styles'
 import { X } from 'phosphor-react'
 
-export interface ToastProps {
-  duration: number
+export interface ToastProps extends ComponentProps<typeof X> {
   title: string
   date: string
 }
 
-export function Toast({ title, date }: ToastProps) {
+export function Toast({ title, date, ...props }: ToastProps) {
   return (
     <ToastContainer>
       <ToastText>
@@ -21,7 +21,7 @@ export function Toast({ title, date }: ToastProps) {
         <ToastDate>{date}</ToastDate>
       </ToastText>
       <ToastClose>
-        <X />
+        <X size={20} {...props} />
       </ToastClose>
     </ToastContainer>
   )

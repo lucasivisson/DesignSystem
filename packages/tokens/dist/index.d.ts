@@ -32,6 +32,7 @@ declare const space: {
     40: string;
     64: string;
     80: string;
+    96: string;
 };
 
 declare const radii: {

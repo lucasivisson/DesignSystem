@@ -63,7 +63,8 @@ var space = {
   20: "5rem",
   40: "10rem",
   64: "16rem",
-  80: "20rem"
+  80: "20rem",
+  96: "24rem"
 };
 var radii = {
   px: "1px",
@@ -512,31 +513,49 @@ MultiStep.displayName = "MultiStep";
 
 // src/components/Toast/styles.ts
 var ToastContainer = styled("div", {
-  width: "$80",
+  width: "$96",
   height: "$20",
-  background: "red",
+  background: "$gray800",
   borderRadius: "$xs",
   color: "$white",
   display: "flex",
   justifyContent: "space-between",
   boxSizing: "border-box",
-  padding: "$4"
+  padding: "$4",
+  border: "1px solid $color$gray600",
+  fontFamily: "$default"
 });
-var ToastTitle = styled("div", {});
-var ToastText = styled("div", {});
-var ToastDate = styled("div", {});
-var ToastClose = styled("div", {});
+var ToastTitle = styled("div", {
+  fontSize: "$xl",
+  fontWeight: "$bold"
+});
+var ToastText = styled("div", {
+  width: "100%",
+  height: "100%",
+  display: "flex",
+  alignItems: "flex-start",
+  flexDirection: "column",
+  justifyContent: "space-between"
+});
+var ToastDate = styled("div", {
+  fontSize: "$sm",
+  color: "$gray200"
+});
+var ToastClose = styled("div", {
+  cursor: "pointer"
+});
 
 // src/components/Toast/index.tsx
 import { X } from "phosphor-react";
 import { jsx as jsx5, jsxs as jsxs4 } from "react/jsx-runtime";
-function Toast({ title, date }) {
+function Toast(_a) {
+  var _b = _a, { title, date } = _b, props = __objRest(_b, ["title", "date"]);
   return /* @__PURE__ */ jsxs4(ToastContainer, { children: [
     /* @__PURE__ */ jsxs4(ToastText, { children: [
       /* @__PURE__ */ jsx5(ToastTitle, { children: title }),
       /* @__PURE__ */ jsx5(ToastDate, { children: date })
     ] }),
-    /* @__PURE__ */ jsx5(ToastClose, { children: /* @__PURE__ */ jsx5(X, {}) })
+    /* @__PURE__ */ jsx5(ToastClose, { children: /* @__PURE__ */ jsx5(X, __spreadValues({ size: 20 }, props)) })
   ] });
 }
 Toast.displayName = "Toast";
