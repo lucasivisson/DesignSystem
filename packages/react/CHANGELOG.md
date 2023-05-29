@@ -1,5 +1,11 @@
 # @lucas-ignite-ui/react
 
+## 2.0.2
+
+### Patch Changes
+
+- Add tooltip and toast components
+
 ## 2.0.1
 
 ### Patch Changes
