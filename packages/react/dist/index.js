@@ -615,8 +615,10 @@ Toast.displayName = "Toast";
 var TooltipContainer = styled("div", {
   background: "$gray900",
   padding: "$3 $4",
-  borderRadius: "$md",
-  color: "$white"
+  borderRadius: "$sm",
+  color: "$white",
+  fontFamily: "$default",
+  fontSize: "$sm"
 });
 
 // src/components/Tooltip/index.tsx
