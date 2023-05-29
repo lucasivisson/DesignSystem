@@ -559,6 +559,25 @@ function Toast(_a) {
   ] });
 }
 Toast.displayName = "Toast";
+
+// src/components/Tooltip/styles.ts
+var TooltipContainer = styled("div", {
+  background: "$gray900",
+  padding: "$3 $4",
+  borderRadius: "$md",
+  color: "$white"
+});
+
+// src/components/Tooltip/index.tsx
+import { jsx as jsx6, jsxs as jsxs5 } from "react/jsx-runtime";
+function Tooltip(_a) {
+  var _b = _a, { date, available } = _b, props = __objRest(_b, ["date", "available"]);
+  return /* @__PURE__ */ jsx6(TooltipContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ jsxs5("div", { children: [
+    date,
+    " - ",
+    available
+  ] }) }));
+}
 export {
   Avatar2 as Avatar,
   Box,
@@ -570,6 +589,7 @@ export {
   TextArea,
   TextInput,
   Toast,
+  Tooltip,
   config,
   createTheme,
   css,

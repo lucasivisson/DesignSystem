@@ -69,6 +69,7 @@ __export(src_exports, {
   TextArea: () => TextArea,
   TextInput: () => TextInput,
   Toast: () => Toast,
+  Tooltip: () => Tooltip,
   config: () => config,
   createTheme: () => createTheme,
   css: () => css,
@@ -609,6 +610,25 @@ function Toast(_a) {
   ] });
 }
 Toast.displayName = "Toast";
+
+// src/components/Tooltip/styles.ts
+var TooltipContainer = styled("div", {
+  background: "$gray900",
+  padding: "$3 $4",
+  borderRadius: "$md",
+  color: "$white"
+});
+
+// src/components/Tooltip/index.tsx
+var import_jsx_runtime6 = require("react/jsx-runtime");
+function Tooltip(_a) {
+  var _b = _a, { date, available } = _b, props = __objRest(_b, ["date", "available"]);
+  return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(TooltipContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { children: [
+    date,
+    " - ",
+    available
+  ] }) }));
+}
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,
@@ -621,6 +641,7 @@ Toast.displayName = "Toast";
   TextArea,
   TextInput,
   Toast,
+  Tooltip,
   config,
   createTheme,
   css,
